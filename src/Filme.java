@@ -2,8 +2,8 @@ public class Filme {
     String nome;
     int anoDeLancamento;
     boolean avaliacao;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
     //Vai imprimir no terminal quando for executado na principal.
