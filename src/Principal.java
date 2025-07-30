@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Principal {
@@ -15,7 +17,7 @@ public class Principal {
         meuFilme.avalia(5);
         meuFilme.avalia(10);
 
-        System.out.println(meuFilme.totalDeAvaliacoes);
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
     }
