@@ -8,9 +8,9 @@ public class Principal {
         Filme meuFilme = new Filme();
 
         //Instanciando os atributos do Objeto meuFilme.
-        meuFilme.nome = "O poderoso Chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("O poderoso Chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
