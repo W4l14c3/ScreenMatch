@@ -13,8 +13,9 @@ public class Filme extends Titulo implements Classificavel {
         this.diretor = diretor;
     }
 
+    //Divide o resultado do metdodo(pegaMedia) por 2
     @Override
     public int getClassificacao() {
-        return 0;
+        return (int)pegaMedia() / 2;
     }
 }

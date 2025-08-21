@@ -5,7 +5,7 @@ public class Titulo {
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
-    private int totalDeAvaliacoes;
+    private int qtdAvaliacoes;
     private int duracaoEmMinutos;
 
     public String getNome() {
@@ -24,8 +24,8 @@ public class Titulo {
         return duracaoEmMinutos;
     }
 
-    public int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
+    public int getQtdAvaliacoes(){
+        return qtdAvaliacoes;
     }
 
     public void setNome(String nome) {
@@ -53,9 +53,10 @@ public class Titulo {
     //Vai calcular quantas avaliações foram recebidas e somar todas.
     public void avalia(double nota) {
         somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
+        qtdAvaliacoes++;
     }
 
+    //Pega a soma das avaliações e divide por quantas avaliações foram recebidas retorna o resultado.
     public double pegaMedia(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+        return somaDasAvaliacoes / qtdAvaliacoes;
     }}
