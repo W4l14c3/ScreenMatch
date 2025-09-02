@@ -40,6 +40,7 @@ public class Episodio implements Classificavel {
         this.serie = serie;
     }
 
+    //Retorna a classificação com base no numero de vizualizações.
     @Override
     public int getClassificacao() {
         if (totalVisualizacoes > 100){

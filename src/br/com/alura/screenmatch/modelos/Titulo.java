@@ -56,7 +56,7 @@ public class Titulo {
         qtdAvaliacoes++;
     }
 
-    //Pega a soma das avaliações e divide por quantas avaliações foram recebidas retorna o resultado.
+    //Retorna a média das avaliações.
     public double pegaMedia(){
         return somaDasAvaliacoes / qtdAvaliacoes;
     }}

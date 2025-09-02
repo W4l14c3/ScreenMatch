@@ -1,11 +1,10 @@
 package br.com.alura.screenmatch.calculos;
 
-import br.com.alura.screenmatch.modelos.Filme;
-
 public class FiltroRecomendacao {
     private String recomendacao;
 
-    //Este metodo vai usar a interface Classificavel para pegar a classificação e verificar.
+    ///Este metodo vai usar a interface {@linkplain Classificavel classificavel} para avaliar a classificação e exibir
+    ///uma mensagem correspondente.
     public void filtra(Classificavel classificavel){
         if(classificavel.getClassificacao() >= 4){
             System.out.println("Está entre os preferidos do momento.");
