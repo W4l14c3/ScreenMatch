@@ -13,9 +13,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         //Criando o Objeto meuFilme.
-        Filme meuFilme = new Filme("O poderoso Chefão");
+        Filme meuFilme = new Filme("O poderoso Chefão",1970);
         //Instanciando os atributos do Objeto meuFilme.
-        meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
@@ -26,17 +25,14 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getQtdAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodeosPorTemporada(10);
         lost.setMinutosPorEpisodeo(50);
         System.out.println("Duração para maratonar Lost:" + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -54,9 +50,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var  filmeDoPaulo = new Filme("Dogville"); //Inferencia de tipo
+        var  filmeDoPaulo = new Filme("Dogville", 2003); //Inferencia de tipo
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
