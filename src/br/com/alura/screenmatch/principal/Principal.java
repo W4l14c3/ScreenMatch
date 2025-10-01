@@ -13,10 +13,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         //Criando o Objeto meuFilme.
-        Filme meuFilme = new Filme();
-
+        Filme meuFilme = new Filme("O poderoso Chefão");
         //Instanciando os atributos do Objeto meuFilme.
-        meuFilme.setNome("O poderoso Chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
@@ -37,8 +35,7 @@ public class Principal {
         lost.setMinutosPorEpisodeo(50);
         System.out.println("Duração para maratonar Lost:" + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -57,9 +54,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var  filmeDoPaulo = new Filme(); //Inferencia de tipo
+        var  filmeDoPaulo = new Filme("Dogville"); //Inferencia de tipo
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
@@ -69,5 +65,7 @@ public class Principal {
         listaDeFilmes.add(outroFilme);
         System.out.println("Tamanho da lista " +  listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.getFirst().getNome());
+
+
     }
 }
