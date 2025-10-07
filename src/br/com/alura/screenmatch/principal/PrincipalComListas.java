@@ -50,5 +50,14 @@ public class PrincipalComListas {
         System.out.println("Lista de filmes ordenada.");
         System.out.println(lista);
 
+        //Criando um novo metodo de comparação
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        /*
+           O Comparator é uma ferramenta que permite que você adicione novas formas de comparação e ordenação,
+           mantendo a estrutura e a lógica original da classe intactas. Isso é muito útil em programação,
+           pois promove a reutilização de código e a manutenção mais fácil,
+           já que você não precisa modificar a classe sempre que quiser uma nova forma de ordenação.
+         */
+        System.out.println(lista);
     }
 }
