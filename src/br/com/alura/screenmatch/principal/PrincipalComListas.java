@@ -5,6 +5,9 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -24,10 +27,28 @@ public class PrincipalComListas {
 
         for (Titulo item: lista){
             System.out.println(item);
-            Filme filme = (Filme) item;
-            //Vai ocorrer um erro por que lost é um objeto tipo Série e não Filme.
-            System.out.println("Classificação: " + filme.getClassificacao());
+            //Verifica e declara uma variavel JavaPath 14, Java path 17
+            if (item instanceof Filme filme && filme.getClassificacao() > 2){
+                //Vai ocorrer um erro por que lost é um objeto tipo Série e não Filme.
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
+
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jaqueline");
+        System.out.println(buscaPorArtista);
+        Collections.sort(buscaPorArtista);
+        System.out.println("Lista de artistas ordenada:");
+        System.out.println(buscaPorArtista);
+        System.out.println("\n");
+
+        //Comparando e ordenando filmes e series
+        Collections.sort(lista);
+        System.out.println("Lista de filmes ordenada.");
+        System.out.println(lista);
 
     }
 }
